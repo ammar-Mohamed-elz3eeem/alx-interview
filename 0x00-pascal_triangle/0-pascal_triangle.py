@@ -1,4 +1,16 @@
+#!/usr/bin/python3
+"""Make pascals tringle array"""
+
+
 def pascal_triangle(n):
+    """make list of lists of pascal's tringle
+
+    Args:
+        n (int): height of the triangle
+
+    Returns:
+        list: list of pascal's tringle values
+    """
     if n < 0:
         return []
     if n == 1:
