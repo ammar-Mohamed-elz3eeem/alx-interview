@@ -11,7 +11,7 @@ def pascal_triangle(n):
     Returns:
         list: list of pascal's tringle values
     """
-    if n < 0:
+    if n <= 0:
         return []
     if n == 1:
         return [[1]]
