@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """make python module to get minimum operations to
 fill a file with number of bytes
 """
