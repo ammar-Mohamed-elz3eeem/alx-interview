@@ -35,11 +35,13 @@ def canUnlockBoxesRec(boxes: List[List[int]], unlocked: List[int],
         return True
     unlockedLen = len(unlocked)
     for box in unlocked:
-        if box < len(boxes):
-            for key in boxes[box]:
-                if key not in unlocked:
-                    unlocked.append(key)
-                    boxesUnloced += 1
+        for key in boxes[box]:
+            if key not in unlocked and key < len(boxes):
+                unlocked.append(key)
+                boxesUnloced += 1
     if (len(unlocked) == unlockedLen):
         return boxesUnloced == len(boxes)
     return canUnlockBoxesRec(boxes, unlocked, boxesUnloced)
+
+
+print(canUnlockAll([ [7, 5], [1, 10, 7], [9, 6, 10], [7, 9], [2], [7, 3], [7, 9, 10, 10, 8, 9, 2, 5], [7, 2, 2, 4, 4, 2, 4, 8, 7], [4, 2, 9, 6, 6, 5, 5], ]))
