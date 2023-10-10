@@ -4,7 +4,7 @@
 from typing import List
 
 
-def canUnlockBoxes(boxes: List[List[int]]) -> bool:
+def canUnlockAll(boxes: List[List[int]]) -> bool:
     """initializer for checkboxes Recursively to
     determine if all boxes can be unlocked or not
 
@@ -31,14 +31,16 @@ def canUnlockBoxesRec(boxes: List[List[int]], unlocked: List[int],
     Returns:
         bool: True if all boxes can be unlocked, call itself otherwise
     """
-    if boxesUnloced == len(boxes):
+    if boxesUnloced >= len(boxes):
         return True
     unlockedLen = len(unlocked)
     for box in unlocked:
-        for key in boxes[box]:
-            if key not in unlocked:
-                unlocked.append(key)
-                boxesUnloced += 1
+        if box < len(boxes):
+            for key in boxes[box]:
+                if key not in unlocked:
+                    unlocked.append(key)
+                    boxesUnloced += 1
     if (len(unlocked) == unlockedLen):
         return boxesUnloced == len(boxes)
+    print(unlocked)
     return canUnlockBoxesRec(boxes, unlocked, boxesUnloced)
