@@ -17,7 +17,6 @@ def minOperations(n: int) -> int:
         int: minimum number of operations needed
     """
     if not isinstance(n, int) or (n <= 0):
-        print(isinstance(n, int))
         return 0
     divisors_sum = []
     for i in range(2, floor(sqrt(n)) + 1):
