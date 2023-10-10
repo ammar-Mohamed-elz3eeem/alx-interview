@@ -22,4 +22,4 @@ def minOperations(n: int) -> int:
     for i in range(2, floor(sqrt(n)) + 1):
         if n % i == 0:
             divisors_sum.append(i + (n // i))
-    return min(divisors_sum), divisors_sum
+    return min(divisors_sum)
