@@ -16,10 +16,11 @@ def minOperations(n: int) -> int:
     Returns:
         int: minimum number of operations needed
     """
-    if (n <= 0):
+    if not isinstance(n, int) or (n <= 0):
+        print(isinstance(n, int))
         return 0
     divisors_sum = []
     for i in range(2, floor(sqrt(n)) + 1):
         if n % i == 0:
             divisors_sum.append(i + (n // i))
-    return min(divisors_sum)
+    return min(divisors_sum), divisors_sum
