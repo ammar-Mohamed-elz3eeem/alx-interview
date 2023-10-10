@@ -21,6 +21,5 @@ def minOperations(n: int) -> int:
     divisors_sum = []
     for i in range(2, floor(sqrt(n)) + 1):
         if n % i == 0:
-            print(i)
             divisors_sum.append(i + (n // i))
     return min(divisors_sum)
