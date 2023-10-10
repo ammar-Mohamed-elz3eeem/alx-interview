@@ -42,5 +42,4 @@ def canUnlockBoxesRec(boxes: List[List[int]], unlocked: List[int],
                     boxesUnloced += 1
     if (len(unlocked) == unlockedLen):
         return boxesUnloced == len(boxes)
-    print(unlocked)
     return canUnlockBoxesRec(boxes, unlocked, boxesUnloced)
