@@ -2,11 +2,10 @@
 """Make script that log the request send to it
 """
 import sys
-import io
-import signal
 
 
-def signal_handler(d, total_file_size) -> None:
+def signal_handler(d, total_file_size):
+    """Generate message when signal detected"""
     print("File size: {}".format(total_file_size))
     for key, val in sorted(d.items()):
         if val != 0:
@@ -40,7 +39,6 @@ try:
                     codes[code] += 1
             if counter == 10:
                 signal_handler(codes, total_file_size)
-                counter = 0       
+                counter = 0
 finally:
     signal_handler(codes, total_file_size)
-
