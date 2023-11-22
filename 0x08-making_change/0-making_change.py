@@ -26,5 +26,3 @@ def makeChange(coins: List[int], total: int) -> int:
         if total == 0:
             return count
     return -1
-
-
