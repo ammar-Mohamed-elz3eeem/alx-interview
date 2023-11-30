@@ -2,6 +2,7 @@
 """ Island perimeter algorithm solution
 """
 
+
 def island_perimeter(grid):
     """Calculate island perimeter based on the number of
     ones on the list of lists passed to the function
