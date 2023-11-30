@@ -19,14 +19,10 @@ def island_perimeter(grid):
                 continue
             if grid[i][j + 1] == 0:
                 perimeter += 1
-                print(grid[i][j + 1], f"i = {i}: j + 1 = {j + 1}")
             if grid[i][j - 1] == 0:
                 perimeter += 1
-                print(grid[i][j - 1], f"i = {i}: j - 1 = {j - 1}")
             if grid[i + 1][j] == 0:
                 perimeter += 1
-                print(grid[i + 1][j], f"i + 1 = {i + 1}: j = {j}")
             if grid[i - 1][j] == 0:
                 perimeter += 1
-                print(grid[i - 1][j], f"i - 1 = {i - 1}: j = {j}")
     return perimeter
